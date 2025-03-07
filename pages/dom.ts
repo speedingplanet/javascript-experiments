@@ -17,3 +17,5 @@ function handleButtonClick() {
 		output.textContent = `Hello, ${firstNameField?.value}`;
 	}
 }
+
+export {};
