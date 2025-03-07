@@ -8,9 +8,10 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "format": "prettier . --check",
-		"format:write": "prettier . --write",
-		"lint": "eslint .",
-		"lint:fix": "eslint . --fix"
+    "format:write": "prettier . --write",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "rest-server": "json-server --port 5500 pages/movies-data.json"
   },
   "engines": {
     "node": ">=20"
@@ -18,6 +19,7 @@
   "devDependencies": {
     "@speedingplanet/eslint-config": "^0.0.8",
     "eslint": "^9.21.0",
+    "json-server": "^1.0.0-beta.3",
     "prettier": "^3.5.3",
     "typescript": "~5.7.2",
     "vite": "^6.2.0"
