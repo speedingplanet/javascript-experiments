@@ -12,44 +12,13 @@ rating (how many stars)
 restriction (PG, PG-13)
 */
 
-interface Movie {
+export interface Movie {
 	id: string;
 	title: string;
 	genre?: string; // Maybe an enum later?
 	length?: number; // int for number of minutes
 	year?: number; // int for year number
 }
-
-let movies: Array<Movie> = [
-	{
-		id: '1',
-		title: 'Wicked',
-		genre: 'Fantasy',
-		length: 160,
-		year: 2024,
-	},
-	{
-		id: '2',
-		title: 'The Super Mario Bros. Movie',
-		genre: 'Animation',
-		length: 92,
-		year: 2023,
-	},
-	{
-		id: '3',
-		title: 'The Little Mermaid',
-		genre: 'Fantasy',
-		length: 80,
-		year: 1989,
-	},
-	{
-		id: '4',
-		title: 'Training Day',
-		genre: 'Thriller, Crime', // Multiple genres?
-		length: 122,
-		year: 2001,
-	},
-];
 
 function renderToGrid(target: Element, movies: Array<Movie>) {
 	/*
@@ -78,26 +47,34 @@ function renderToGrid(target: Element, movies: Array<Movie>) {
 	target.append(...rows);
 }
 
-async function fetchMovies() {
-	let moviesURL = 'http://localhost:5500/movies';
+async function fetchMovies(): Promise<Array<Movie>> {
 	try {
+		let moviesURL = 'http://localhost:5500/movies';
 		let response = await fetch(moviesURL);
 
-		// True if we get back a 200-399 response
 		if (response.ok) {
-			// Process data
+			let movies = await response.json() as Array<Movie>;
+			return movies;
 		} else {
-			// Response of 400-599
 			throw new Error(`Bad response: ${response.status}`);
 		}
-
 	} catch (error) {
 		console.error('Could not fetch movie data because', error);
+		throw error;
 	}
 }
 
-let moviesGrid = document.querySelector('.movies-grid');
-if (moviesGrid) {
-	renderToGrid(moviesGrid, movies)
+async function init() {
+	console.log('Inside init(), about to call fetchMovies()');
+	let movies = await fetchMovies();
+	console.log('Inside init(), finished calling fetchMovies()');
+
+	let moviesGrid = document.querySelector('.movies-grid');
+	if (moviesGrid) {
+		renderToGrid(moviesGrid, movies);
+	}
 }
 
+console.log('Before calling init()');
+init();
+console.log('After calling init();');
