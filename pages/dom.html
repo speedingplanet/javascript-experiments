@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Object Model (DOM)</title>
+    <style>
+      .form-grid {
+        display: grid;
+        width: 50vw;
+        grid-template-columns: min-content 1fr;
+        gap: 0.5em;
+        margin-left: 3vw;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Document Object Model (DOM)</h1>
+        <hr />
+      </header>
+      <!-- form.form-grid>div*2>label+input:text -->
+      <form class="form-grid">
+        <div class="form-label"><label for="first-name">First&nbsp;Name:</label></div><input type="text" name="firstName" id="first-name">
+        <div class="form-label"><label for="last-name">Last&nbsp;Name:</label></div><input type="text" name="lastName" id="last-name">
+        <div class="button-container"><button type="button">Greet</button></div>
+      </form>
+      <hr>
+      <section id="output"></section>
+    </main>
+    <script type="module" src="dom.ts"></script>
+  </body>
+</html>
