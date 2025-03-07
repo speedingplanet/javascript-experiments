@@ -1,17 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our Favorite Movies</title>
-  </head>
-  <body>
-    <main>
-      <header>
-        <h1>Our Favorite Movies</h1>
-        <hr />
-      </header>
-    </main>
-    <script type="module" src="/src/movies.ts"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<link
+			rel="stylesheet"
+			href="movies.css"
+		/>
+		<title>Our Favorite Movies</title>
+	</head>
+	<body>
+		<main>
+			<header>
+				<h1>Our Favorite Movies</h1>
+				<hr />
+			</header>
+			<!-- section.movies-grid>div.movie-row>div*4 -->
+			<section class="movies-grid">
+				<div class="movie-row">
+					<div class="movie-title">Title</div>
+					<div class="movie-genre">Genre</div>
+					<div class="movie-year">Year</div>
+					<div class="movie-length">Length</div>
+				</div>
+				<!-- 
+				<div class="movie-row">
+					<div class="movie-title">Wicked</div>
+					<div class="movie-genre">Fantasy</div>
+					<div class="movie-year">2024</div>
+					<div class="movie-length">160</div>
+				</div>
+				<div class="movie-row">
+					<div class="movie-title">The Super Mario Bros. Movie</div>
+					<div class="movie-genre">Animation</div>
+					<div class="movie-year">2023</div>
+					<div class="movie-length">92</div>
+				</div>
+				 -->
+			</section>
+		</main>
+		<script
+			type="module"
+			src="/src/movies.ts"
+		></script>
+	</body>
 </html>
