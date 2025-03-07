@@ -78,6 +78,24 @@ function renderToGrid(target: Element, movies: Array<Movie>) {
 	target.append(...rows);
 }
 
+async function fetchMovies() {
+	let moviesURL = 'http://localhost:5500/movies';
+	try {
+		let response = await fetch(moviesURL);
+
+		// True if we get back a 200-399 response
+		if (response.ok) {
+			// Process data
+		} else {
+			// Response of 400-599
+			throw new Error(`Bad response: ${response.status}`);
+		}
+
+	} catch (error) {
+		console.error('Could not fetch movie data because', error);
+	}
+}
+
 let moviesGrid = document.querySelector('.movies-grid');
 if (moviesGrid) {
 	renderToGrid(moviesGrid, movies)
