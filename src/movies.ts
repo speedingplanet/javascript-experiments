@@ -53,7 +53,7 @@ async function fetchMovies(): Promise<Array<Movie>> {
 		let response = await fetch(moviesURL);
 
 		if (response.ok) {
-			let movies = await response.json() as Array<Movie>;
+			let movies = (await response.json()) as Array<Movie>;
 			return movies;
 		} else {
 			throw new Error(`Bad response: ${response.status}`);

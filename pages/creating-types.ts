@@ -36,10 +36,8 @@ class Person3 {
 	firstName = '';
 	lastName = '';
 	id = 0;
-
 }
 
 let anotherPerson4 = new Person3();
-anotherPerson4.firstName = 'Fred',
-anotherPerson4.lastName = 'Blasio';
+(anotherPerson4.firstName = 'Fred'), (anotherPerson4.lastName = 'Blasio');
 anotherPerson4.id = 30;

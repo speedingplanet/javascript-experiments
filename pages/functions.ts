@@ -30,7 +30,7 @@ let MyCustomButton = () => {
 		// Some HTML goes here
 		0
 	);
-}
+};
 
 function calculator(operator, left, right) {
 	return operator(left, right);

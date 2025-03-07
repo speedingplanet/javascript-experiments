@@ -13,10 +13,10 @@ x = 1000000000000;
 // Cannot change the value
 const y = 20;
 
-// Bad, 
-// out of date, 
-// has weird side effects, 
-// doesn't work the way you think it should; 
+// Bad,
+// out of date,
+// has weird side effects,
+// doesn't work the way you think it should;
 // orders pineapple on its pizza
 var z = 'The old ways';
 
@@ -24,13 +24,13 @@ var z = 'The old ways';
 let aNumber = 10;
 
 let aString = 'Hi';
-let aDoubleQuotedString = "Hello";
+let aDoubleQuotedString = 'Hello';
 let aBacktickString = `Greetings`;
 let multiLineString = `
 To be or not to be
 That is the question
 Whether 'tis nobler in the mind....
-`
+`;
 let myName = 'John';
 let interpolatedString = `Greetings, ${myName}`;
 console.log(interpolatedString);
@@ -42,7 +42,7 @@ let falseBoolean = false;
 // Magic six falsy: false, 0, '', null, undefined, NaN
 let aTrueNumber = 5;
 if (aTrueNumber) {
-	console.log('true')
+	console.log('true');
 } else {
 	console.log('false');
 }
@@ -52,19 +52,19 @@ let names = ['Miguel', 'Kalkidan', 'Jerri', 'Beatriz'];
 let emptyArray = [];
 
 // Preferred (clearer to read)
-let emptyArrayWithType: Array<string> = []
+let emptyArrayWithType: Array<string> = [];
 
 // Fine (somewhat confusing syntax)
-let emptyArrayWithType2: string[] = []
+let emptyArrayWithType2: string[] = [];
 
-// Object literals 
+// Object literals
 // But see also creating-types.ts in this directory
 let person = {
 	firstName: 'John',
 	lastName: 'Paxton',
 	city: 'Nutley',
-	state: 'NJ'
-}
+	state: 'NJ',
+};
 
 console.log(`The person's name is ${person.firstName}`);
 
