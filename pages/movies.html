@@ -18,6 +18,56 @@
 				<h1>Our Favorite Movies</h1>
 				<hr />
 			</header>
+			<!-- form.add-movie-form>(div.form-label>label)+div.form-control>input:text -->
+			<form class="add-movie-form">
+				<div class="form-label"><label for="movie-title">Title:</label></div>
+				<div class="form-control">
+					<input
+						type="text"
+						name="title"
+						id="movie-title"
+						required
+					/>
+				</div>
+				<div class="form-label"><label for="movie-year">Year:</label></div>
+				<div class="form-control">
+					<input
+						type="number"
+						min="1880"
+						max="2030"
+						name="year"
+						id="movie-year"
+					/>
+				</div>
+				<div class="form-label"><label for="movie-length">Length:</label></div>
+				<div class="form-control">
+					<input
+						type="number"
+						min="10"
+						max="500"
+						name="length"
+						id="movie-length"
+					/>
+				</div>
+				<div class="form-label"><label for="movie-genres">Genres:</label></div>
+				<div class="select-control">
+					<select
+						name="genres"
+						id="movie-genres"
+					>
+					<option value="">No genre</option>
+						<option value="Fantasy">Fantasy</option>
+						<option value="Musical">Musical</option>
+						<option value="Animation">Animation</option>
+						<option value="Thriller">Thriller</option>
+						<option value="Crime">Crime</option>
+						<option value="Disney">Disney</option>
+						<option value="FairyTale">Fairy Tale</option>
+						<option value="VideoGame">Video Game</option>
+					</select>
+				</div>
+				<div class="button-group"><button type="submit">Add Movie</button></div>
+			</form>
 			<!-- section.movies-grid>div.movie-row>div*4 -->
 			<section class="movies-grid">
 				<div class="movie-row">
@@ -26,20 +76,6 @@
 					<div class="movie-year">Year</div>
 					<div class="movie-length">Length</div>
 				</div>
-				<!-- 
-				<div class="movie-row">
-					<div class="movie-title">Wicked</div>
-					<div class="movie-genre">Fantasy</div>
-					<div class="movie-year">2024</div>
-					<div class="movie-length">160</div>
-				</div>
-				<div class="movie-row">
-					<div class="movie-title">The Super Mario Bros. Movie</div>
-					<div class="movie-genre">Animation</div>
-					<div class="movie-year">2023</div>
-					<div class="movie-length">92</div>
-				</div>
-				 -->
 			</section>
 		</main>
 		<script

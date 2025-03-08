@@ -3,6 +3,7 @@
 	/* CSS Custom Property */
 	/* CSS Variables */
 	--movies-grid-columns: 4;
+	box-sizing: border-box;
 }
 
 .movies-grid {
@@ -14,7 +15,13 @@
 	display:grid;
 	grid-template-columns: subgrid;
 	grid-column: span var(--movies-grid-columns);
+	border-bottom: 1px solid lightgrey;
 }
+
+.movie-row:nth-child(even) {
+	background-color: aquamarine;
+}
+
 
 .movie-row div {
 	border-right: 2px gray solid;
@@ -30,10 +37,31 @@
 	font-weight: bold;
 	border-bottom: 2px black solid;
 }
+
+.add-movie-form {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	row-gap: 0.2em;
+	width: 60vw;
+	margin-bottom: 4vh
+}
+
+.form-control > * {
+	width: 95%;
+}
+
+.select-control > * {
+	width: 99%
+}
+
+.button-group {
+	text-align: end;
+	grid-column: span 2;
+}
+
 /*
-.movies-grid {}
-.movies-title {}
-.movies-genre {}
-.movies-year {}
-.movies-length {}
+.add-movie-form {}
+.form-label {}
+.form-control {}
+.select-control {}
 */

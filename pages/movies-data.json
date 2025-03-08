@@ -1,32 +1,65 @@
 {
-	"movies": [
-		{
-			"id": "1",
-			"title": "Wicked",
-			"genre": "Fantasy",
-			"length": 160,
-			"year": 2024
-		},
-		{
-			"id": "2",
-			"title": "The Super Mario Bros. Movie",
-			"genre": "Animation",
-			"length": 92,
-			"year": 2023
-		},
-		{
-			"id": "3",
-			"title": "The Little Mermaid",
-			"genre": "Fantasy",
-			"length": 80,
-			"year": 1989
-		},
-		{
-			"id": "4",
-			"title": "Training Day",
-			"genre": "Thriller, Crime",
-			"length": 122,
-			"year": 2001
-		}
-	]
+  "movies": [
+    {
+      "id": "1",
+      "title": "Wicked",
+      "genres": [
+        "Fantasy",
+        "Musical"
+      ],
+      "length": 160,
+      "year": 2024
+    },
+    {
+      "id": "2",
+      "title": "The Super Mario Bros. Movie",
+      "genres": [
+        "Animation",
+        "Video Game",
+        "Fantasy"
+      ],
+      "length": 92,
+      "year": 2023
+    },
+    {
+      "id": "3",
+      "title": "The Little Mermaid",
+      "genres": [
+        "Fantasy",
+        "Disney",
+        "Musical",
+        "Fairy Tale"
+      ],
+      "length": 80,
+      "year": 1989
+    },
+    {
+      "id": "4",
+      "title": "Training Day",
+      "genres": [
+        "Thriller",
+        "Crime"
+      ],
+      "length": 122,
+      "year": 2001
+    },
+    {
+      "id": "e65a",
+      "title": "Heat",
+      "year": "1995",
+      "length": "170",
+      "genres": [
+        "Crime"
+      ]
+    },
+    {
+      "id": "f638",
+      "title": "Barbie",
+      "year": "2023",
+      "length": "114",
+      "genres": [
+        "Thriller"
+      ]
+    }
+  ]
 }
